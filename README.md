@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Dashboard - Reloj Control 
 
+Desarrollo de dashboard para desarrollo de reloj control.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Autores
+
+- [@JuanMAA](https://www.github.com/JuanMAA)
+- [@hariasimov21](https://www.github.com/hariasimov21)
 
 ## Available Scripts
 
