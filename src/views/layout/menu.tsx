@@ -35,6 +35,17 @@ export default function MenuComponent() {
             Feriados
           </Menu.Item>
         </SubMenu>
+        <SubMenu key="sub3" icon={<CalendarOutlined />} title="Horarios">
+          <Menu.Item icon={<CalendarOutlined />} key="8">
+            Listado
+          </Menu.Item>
+          <Menu.Item icon={<CalendarOutlined />} key="9">
+            Crear Horario
+          </Menu.Item>
+          <Menu.Item icon={<CalendarOutlined />} key="10">
+            Feriados
+          </Menu.Item>
+        </SubMenu>
       </Menu>
     </>
   );

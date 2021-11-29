@@ -1,8 +1,8 @@
-import { Layout, Breadcrumb, Card } from "antd";
-import { ClockCircleOutlined } from "@ant-design/icons";
+import { Layout, Breadcrumb, Card, Avatar } from "antd";
+import { ClockCircleOutlined, UserOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import MenuComponent from "../layout/menu";
-import FooterComponent from "../layout/footer";
+//import FooterComponent from "../layout/footer";
 
 const { Header, Content, Sider } = Layout;
 
@@ -38,9 +38,14 @@ export default function LayoutComponent(props: Props) {
           <MenuComponent />
         </Sider>
         <Layout>
-          <Header className="site-top-bar" style={{ padding: 0 }} />
-          <Content style={{ margin: "0 16px" }}>
-            <Breadcrumb style={{ margin: "16px 0" }}>
+          <Header
+            className="site-top-bar"
+            style={{ padding: 0, textAlign: "right", paddingRight: 20 }}
+          >
+            <Avatar className="icon-dynamic" size="large" icon={<UserOutlined />} />
+          </Header>
+          <Content style={{ margin: 20 }}>
+            <Breadcrumb style={{ padding: 15 }}>
               <Breadcrumb.Item>User</Breadcrumb.Item>
               <Breadcrumb.Item>Bill</Breadcrumb.Item>
             </Breadcrumb>
