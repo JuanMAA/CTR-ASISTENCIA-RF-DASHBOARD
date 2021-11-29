@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import esEs from "antd/es/locale/es_ES";
+import Routes from "./routes/routes";
 
 import { ConfigProvider } from "antd";
 
@@ -14,7 +14,7 @@ import "moment/locale/es";
 ReactDOM.render(
   <React.StrictMode>
     <ConfigProvider locale={esEs}>
-      <App />
+      <Routes />
     </ConfigProvider>
   </React.StrictMode>,
   document.getElementById("root")
