@@ -1,6 +1,25 @@
 import { Form, Input, Button, Checkbox, Row, Col } from "antd";
+import { BioSample, FingerPosition } from "@digitalpersona/core";
+import {
+  EnrollmentContext,
+  FingerprintsEnroll,
+} from "@digitalpersona/enrollment";
 
 export default function Auth() {
+
+  let submitFingerprints = async (
+    context: EnrollmentContext,
+    samples: BioSample[],
+    pos: FingerPosition
+  ) => {
+    try {
+      const api = new FingerprintsEnroll(context);
+      await api.enroll(pos, samples);
+    } catch (error) {
+      console.error("error ", error);
+    }
+  };
+
   return (
     <Row
       style={{

@@ -4,6 +4,7 @@ import {
   PieChartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 const { SubMenu } = Menu;
 
 export default function MenuComponent() {
@@ -11,39 +12,28 @@ export default function MenuComponent() {
     <>
       <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
         <Menu.Item key="1" icon={<PieChartOutlined />}>
-          Principal
+          <Link to="/dashboard">Principal</Link>
         </Menu.Item>
         <SubMenu key="sub1" icon={<UserOutlined />} title="Usuarios">
           <Menu.Item icon={<UserOutlined />} key="2">
-            Listado
+            <Link to="/data?t=usuario">Listado</Link>
           </Menu.Item>
           <Menu.Item icon={<UserOutlined />} key="3">
-            Crear usuario
+            <Link to="/data/usuario/new">Crear Usuario</Link>
           </Menu.Item>
           <Menu.Item icon={<UserOutlined />} key="4">
-            Tipos Usuario
+            <Link to="/data?t=tipos-usuario">Tipos Usuario</Link>
           </Menu.Item>
         </SubMenu>
         <SubMenu key="sub2" icon={<CalendarOutlined />} title="Horarios">
           <Menu.Item icon={<CalendarOutlined />} key="5">
-            Listado
+            <Link to="/data?t=horarios">Listado</Link>
           </Menu.Item>
           <Menu.Item icon={<CalendarOutlined />} key="6">
-            Crear Horario
+            <Link to="/data/horarios/new">Crear Horario</Link>
           </Menu.Item>
           <Menu.Item icon={<CalendarOutlined />} key="7">
-            Feriados
-          </Menu.Item>
-        </SubMenu>
-        <SubMenu key="sub3" icon={<CalendarOutlined />} title="Horarios">
-          <Menu.Item icon={<CalendarOutlined />} key="8">
-            Listado
-          </Menu.Item>
-          <Menu.Item icon={<CalendarOutlined />} key="9">
-            Crear Horario
-          </Menu.Item>
-          <Menu.Item icon={<CalendarOutlined />} key="10">
-            Feriados
+            <Link to="/data?t=feriados">Feriados</Link>
           </Menu.Item>
         </SubMenu>
       </Menu>

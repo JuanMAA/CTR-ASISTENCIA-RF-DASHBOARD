@@ -11,7 +11,9 @@ export default function Router() {
         <Route path="/" exact component={LoginView} />
         <LayoutComponent>
           <>
-            <PrivateRoute path="/dashboard" component={ContainerComponent} />
+            <Route path="/dashboard" component={ContainerComponent} />
+            <Route path="/profile" component={<> Holaa </>} />
+
           </>
         </LayoutComponent>
       </Switch>
