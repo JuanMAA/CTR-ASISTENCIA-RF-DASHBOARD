@@ -1,6 +1,8 @@
 import { Menu } from "antd";
 import {
+  CalculatorOutlined,
   CalendarOutlined,
+  ContactsOutlined,
   PieChartOutlined,
   UserOutlined,
 } from "@ant-design/icons";
@@ -10,30 +12,48 @@ const { SubMenu } = Menu;
 export default function MenuComponent() {
   return (
     <>
-      <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
+      <Menu theme="light" defaultSelectedKeys={["1"]} mode="vertical">
         <Menu.Item key="1" icon={<PieChartOutlined />}>
           <Link to="/dashboard">Principal</Link>
         </Menu.Item>
         <SubMenu key="sub1" icon={<UserOutlined />} title="Usuarios">
           <Menu.Item icon={<UserOutlined />} key="2">
-            <Link to="/data?t=usuario">Listado</Link>
+            <Link to="/usuarios">Listado de Usuarios</Link>
           </Menu.Item>
           <Menu.Item icon={<UserOutlined />} key="3">
-            <Link to="/data/usuario/new">Crear Usuario</Link>
-          </Menu.Item>
-          <Menu.Item icon={<UserOutlined />} key="4">
-            <Link to="/data?t=tipos-usuario">Tipos Usuario</Link>
+            <Link to="/usuario">Editar/Crear Usuarios</Link>
           </Menu.Item>
         </SubMenu>
         <SubMenu key="sub2" icon={<CalendarOutlined />} title="Horarios">
           <Menu.Item icon={<CalendarOutlined />} key="5">
-            <Link to="/data?t=horarios">Listado</Link>
+            <Link to="/horarios">Listado de Horarios</Link>
           </Menu.Item>
           <Menu.Item icon={<CalendarOutlined />} key="6">
-            <Link to="/data/horarios/new">Crear Horario</Link>
+            <Link to="/horario">Editar/Crear Horarios</Link>
           </Menu.Item>
+        </SubMenu>
+        <SubMenu key="sub3" icon={<CalendarOutlined />} title="Turnos">
           <Menu.Item icon={<CalendarOutlined />} key="7">
-            <Link to="/data?t=feriados">Feriados</Link>
+            <Link to="/turnos">Listado de Turnos</Link>
+          </Menu.Item>
+          <Menu.Item icon={<CalendarOutlined />} key="8">
+            <Link to="/turno">Editar/Crear Turno</Link>
+          </Menu.Item>
+        </SubMenu>
+        <SubMenu key="sub4" icon={<CalculatorOutlined />} title="Feriados">
+          <Menu.Item icon={<CalendarOutlined />} key="9">
+            <Link to="/feriados">Feriados</Link>
+          </Menu.Item>
+          <Menu.Item icon={<CalendarOutlined />} key="10">
+            <Link to="/feriado">Editar/Crear Feriado</Link>
+          </Menu.Item>
+        </SubMenu>
+        <SubMenu key="sub5" icon={<ContactsOutlined />} title="Permisos">
+          <Menu.Item icon={<CalendarOutlined />} key="9">
+            <Link to="/permisos">Permisos</Link>
+          </Menu.Item>
+          <Menu.Item icon={<CalendarOutlined />} key="10">
+            <Link to="/permiso">Editar/Crear Permiso</Link>
           </Menu.Item>
         </SubMenu>
       </Menu>

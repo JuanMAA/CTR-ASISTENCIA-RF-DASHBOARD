@@ -1,38 +1,26 @@
 import { Form, Input, Button, Checkbox, Row, Col } from "antd";
-import { BioSample, FingerPosition } from "@digitalpersona/core";
-import {
-  EnrollmentContext,
-  FingerprintsEnroll,
-} from "@digitalpersona/enrollment";
+import Imagen from "../../img/bg_image.jpg";
 
 export default function Auth() {
 
-  let submitFingerprints = async (
-    context: EnrollmentContext,
-    samples: BioSample[],
-    pos: FingerPosition
-  ) => {
-    try {
-      const api = new FingerprintsEnroll(context);
-      await api.enroll(pos, samples);
-    } catch (error) {
-      console.error("error ", error);
-    }
-  };
-
   return (
     <Row
-      style={{
-        height: "100%",
-        width: "100%",
-        position: "fixed",
-      }}
+    style={{
+      height: "100%",
+      width: "100%",
+      position: "fixed",
+      backgroundImage: `url(${Imagen})`,
+      backgroundSize: "100% 100%",
+    }}
     >
       <Col xs={24} style={{ margin: "auto" }}>
         <Form
           style={{
-            width: "30em",
+            width: "35em",
             margin: "auto",
+            backgroundColor: "white",
+            padding: "20px 30px",
+            borderRadius: 10
           }}
           layout="vertical"
           name="basic"

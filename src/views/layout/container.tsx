@@ -1,11 +1,26 @@
 import React from "react";
-import { Content } from "antd/lib/layout/layout";
+import { Card, Col, Row } from "antd";
 
-export default function ContainerComponent() {
-
+export default function efwefewfwe() {
   return (
     <>
-      <Content style={{ margin: "0 16px" }}>data</Content>
+      <Card
+        title={"Mantenedor de Usuario"}
+        style={{ minHeight: 700 }}
+        extra={<></>}
+      >
+        <Row>
+          <Col xl={24} md={12} xxl={8} style={{ margin: 3 }}>
+
+          </Col>
+          <Col xl={24} md={12} xxl={8} style={{ margin: 3 }}>
+
+          </Col>
+          <Col xl={24} md={12} xxl={8} style={{ margin: 3 }}>
+            
+          </Col>
+        </Row>
+      </Card>
     </>
   );
 }

@@ -1,10 +1,8 @@
 @import "~antd/lib/style/themes/default.less";
 @import "~antd/dist/antd.less";
-@primary-color: #1f924f;
+@primary-color: #3073c0;
 
-.site-layout {
-  background: @primary-color;
-}
+
 
 .site-top-bar {
   background: @primary-color;
@@ -14,6 +12,31 @@
   background: @white;
 }
 
-.icon-dynamic{
-  background: @layout-header-background
+.icon-dynamic {
+  background: @layout-header-background;
+}
+
+.ant-table-thead,
+.ant-layout-sider-trigger {
+  background: @primary-color !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
