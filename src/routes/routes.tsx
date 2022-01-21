@@ -12,6 +12,7 @@ import ComponenteMantenedorFeriados from "../views/mainteiners/feriados/mantened
 import ComponenteListadoFeriados from "../views/mainteiners/feriados/listadoFeriados";
 import ComponenteMantenedorPermisos from "../views/mainteiners/permisos/mantenedorPermiso";
 import ComponenteListadoPermisos from "../views/mainteiners/permisos/listadoPermisos";
+import PrivateRoute from "./private-route";
 
 export default function Router() {
   return (
@@ -20,17 +21,17 @@ export default function Router() {
         <Route path="/" exact component={LoginView} />
         <LayoutComponent>
           <>
-          <Route path="/dashboard" component={ComponenteDashboard} />
-            <Route path="/usuario" component={MantenedorUsuario} />
-            <Route path="/usuarios" component={ListadoUsuarios} />
-            <Route path="/horario" component={MantenedorHorario} />
-            <Route path="/horarios" component={ComponenteListadoHorarios} />
-            <Route path="/turno" component={ComponenteMantenedorTurnos} />
-            <Route path="/turnos" component={ComponenteListadoTurnos} />
-            <Route path="/feriado" component={ComponenteMantenedorFeriados} />
-            <Route path="/feriados" component={ComponenteListadoFeriados} />
-            <Route path="/permiso" component={ComponenteMantenedorPermisos} />
-            <Route path="/permisos" component={ComponenteListadoPermisos} />
+            <PrivateRoute path="/dashboard" component={ComponenteDashboard} />
+            <PrivateRoute path="/usuario" component={MantenedorUsuario} />
+            <PrivateRoute path="/usuarios" component={ListadoUsuarios} />
+            <PrivateRoute path="/horario" component={MantenedorHorario} />
+            <PrivateRoute path="/horarios" component={ComponenteListadoHorarios} />
+            <PrivateRoute path="/turno" component={ComponenteMantenedorTurnos} />
+            <PrivateRoute path="/turnos" component={ComponenteListadoTurnos} />
+            <PrivateRoute path="/feriado" component={ComponenteMantenedorFeriados} />
+            <PrivateRoute path="/feriados" component={ComponenteListadoFeriados} />
+            <PrivateRoute path="/permiso" component={ComponenteMantenedorPermisos} />
+            <PrivateRoute path="/permisos" component={ComponenteListadoPermisos} />
           </>
         </LayoutComponent>
       </Switch>
